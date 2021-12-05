@@ -38,8 +38,6 @@ public class Lesson1_4_2 {
                     spending += expenses; // сумма расходов
                     break;
                 case 3:
-                    incomeTax(income);
-                    incomeMinusSpendingTax(income, spending);
                     favoriteTaxSystem(income, spending);
                     break;
                 default:
@@ -63,17 +61,17 @@ public class Lesson1_4_2 {
     }
 
     public static int favoriteTaxSystem(int income, int spending) {
-        int tax6Percent = income * 6 / 100;
-        int tax15PercentFromDiff = (income - spending) * 15 / 100;
+        int tax6Percent = incomeTax(income);
+        int tax15PercentFromDiff = incomeMinusSpendingTax(income, spending);
         int benefitTax = Math.abs(tax6Percent - tax15PercentFromDiff);
-        if (tax6Percent <= benefitTax) {
+        if (tax6Percent < benefitTax) {
             System.out.println("Мы советуем вам УСН1 - 6% от доходов ");
             System.out.println("Ваш налог составит: " + tax6Percent);
             System.out.println("Налог на другой системе: " + tax15PercentFromDiff);
             System.out.println("Экономия: " + benefitTax);
             return tax6Percent;
         } else {
-            System.out.println("Мы советуем вам УСН2 - 15% от разницы доходов и расходо ");
+            System.out.println("Мы советуем вам УСН2 - 15% от разницы доходов и расходов ");
             System.out.println("Ваш налог составит: " + tax15PercentFromDiff);
             System.out.println("Налог на другой системе: " + tax6Percent);
             System.out.println("Экономия: " + benefitTax);
