@@ -66,7 +66,7 @@ public class Lesson1_4_2 {
         int tax6Percent = income * 6 / 100;
         int tax15PercentFromDiff = (income - spending) * 15 / 100;
         int benefitTax = Math.abs(tax6Percent - tax15PercentFromDiff);
-        if (tax6Percent < benefitTax) {
+        if (tax6Percent <= benefitTax) {
             System.out.println("Мы советуем вам УСН1 - 6% от доходов ");
             System.out.println("Ваш налог составит: " + tax6Percent);
             System.out.println("Налог на другой системе: " + tax15PercentFromDiff);
