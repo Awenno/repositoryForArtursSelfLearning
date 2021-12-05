@@ -21,8 +21,6 @@ import java.util.Scanner;
 
 public class Lesson1_4_1 {
     public static void main(String[] args) {
-        //double doubleNumb = 0.0;
-        //float floatNumb = 0.0f;
 
         Scanner scanner = new Scanner(System.in);
 
