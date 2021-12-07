@@ -52,21 +52,27 @@ public class Lesson1_4_1 {
     }
 
     public static double comparisonOperation(double doubleNumb, float floatNumb) {
-        if (doubleNumb == floatNumb) {
+        if (Math.abs(doubleNumb - floatNumb) < 0.0001) {
             System.out.println("Результат:\nчисла равны");
+        } else if (doubleNumb > floatNumb) {
+            System.out.println("Результат:\nчисла неравны");
+            System.out.println("Число " + doubleNumb + " больше!");
         } else {
             System.out.println("Результат:\nчисла неравны");
+            System.out.println("Чсло " + floatNumb + " больше!");
         }
         return floatNumb;
     }
 
+    // метод, округляющий
     public static double roundingFractionalPart(double doubleNumb) {
         System.out.println(Math.round(doubleNumb));
         return doubleNumb;
     }
 
+    // метод, отбрасывающий дробную часть
     public static long discardFractionalPart(double doubleNumb) {
-        long discardDoubleResult = Long.parseLong(String.format("%.0f", doubleNumb));
+        long discardDoubleResult = (long) doubleNumb;
         System.out.println(discardDoubleResult);
         return discardDoubleResult;
     }
