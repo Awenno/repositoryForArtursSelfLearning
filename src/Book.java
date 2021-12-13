@@ -8,18 +8,17 @@ import java.util.Arrays;
 
 public class Book {
     String bookName;   // название книги
-    String author;     // автор
     String genre;      // жанр
     int numberVolumes; // количество томов
     int numberPages;   // количество страниц
     int fontSize;      // размер шрифта
     double rating;     // рейтинг среди читателей
     static double bestRating;
+    Author.author;
 
-    public Book(String bookName, String author, String genre, int numberVolumes, int numberPages, int fontSize,
+    public Book(String bookName, String genre, Author.author, int numberVolumes, int numberPages, int fontSize,
                 double rating) {
         this.bookName = bookName;
-        this.author = author;
         this.genre = genre;
         this.numberVolumes = numberVolumes;
         this.numberPages = numberPages;
@@ -28,9 +27,8 @@ public class Book {
         bestRating = Math.max(bestRating, rating);
     }
 
-    public Book(String bookName, String author, String genre, int numberPages, int fontSize, double rating) {
+    public Book(String bookName,String genre, int numberPages, int fontSize, double rating) {
         this.bookName = bookName;
-        this.author = author;
         this.genre = genre;
         this.numberVolumes = 1;
         this.numberPages = numberPages;
@@ -40,7 +38,7 @@ public class Book {
     }
 
     public String toString() {
-        return bookName + "\nавтор: " + author + "\nжанр: " + genre + "\nколичество томов: "
+        return bookName + "\nавтор: " +  "\nжанр: " + genre + "\nколичество томов: "
                 + numberVolumes + "\nколичество страниц: " + numberPages + "\nразмер шрифта: " + fontSize
                 + "\nрейтинг среди читателей: " + rating;
     }
