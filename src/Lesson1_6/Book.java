@@ -3,7 +3,7 @@ package Lesson1_6;
 /**
  * Модель книги
  */
-public class Book {
+public class Book<String> {
     String bookName;   // название книги
     String genre;      // жанр
     Authors author;    // ФИО автора получаем из класса Authors
