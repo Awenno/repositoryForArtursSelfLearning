@@ -26,8 +26,7 @@ public class Shopping {
         for (int i = 0; i < products.length; i++) {
             System.out.println(products[i] + " " + cost[i] + " руб/шт");
         }
-        int productNumber = 0;
-        int productCount = 0;
+
         int totalPrice = 0;
         Scanner scanner = new Scanner(System.in);
 
@@ -40,8 +39,8 @@ public class Shopping {
             }
 
             String[] input = inputStr.split(" ");
-            productNumber = Integer.parseInt(input[0]) - 1;
-            productCount = Integer.parseInt(input[1]);
+            int productNumber = Integer.parseInt(input[0]) - 1;
+            int productCount = Integer.parseInt(input[1]);
 
             selectedProductSum[productNumber] += cost[productNumber] * productCount;
             selectedProducts[productNumber] += productCount;
