@@ -13,11 +13,11 @@ public class Main {
                     player.getSlotsCount()
             );
             int slot = scanner.nextInt();
-            if(slot == -1) {
+            if (slot == -1) {
                 System.out.println("Game over!");
                 break;
             }
-            player.shotWithWeapon(slot - 1);
+            player.shotWithWeapon(slot);
         }
     }
 }

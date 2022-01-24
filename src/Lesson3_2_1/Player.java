@@ -21,14 +21,12 @@ public class Player {
     }
 
     public void shotWithWeapon(int slot) {
-        while (true) {
-            if (slot >= getSlotsCount() || slot < 0) {
-                System.out.println("Вы ввели неверный параметр");
-                break;
-            }
+
+        if (slot > getSlotsCount() || slot <= 0) {
+            System.out.println("Вы ввели неверный параметр");
+        } else {
             Weapon weapon = weaponSlots[slot];
             weapon.shot();
-            break;
         }
     }
 }
