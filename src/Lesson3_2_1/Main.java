@@ -1,5 +1,7 @@
 package Lesson3_2_1;
 
+import Lesson3_2_1.weapon.Weapon;
+
 import java.util.Scanner;
 
 public class Main {
