@@ -9,15 +9,14 @@ public class Main {
         SupplierImpl supplier = new SupplierImpl("Виталик");
         Librarian librarian = administrator;
 
-        administrator.findBook(administrator,supplier);
-        administrator.orderBook(librarian,supplier);
-        reader.getBook(administrator, reader);
-        administrator.notifyReader(administrator, reader);
-        supplier.suppliesBook(supplier,administrator);
-        librarian.orderBook(librarian,supplier);
-        reader.returnBook(administrator,reader);
-        administrator.returnBook(administrator,reader);
-
+        administrator.findBook(supplier);
+        administrator.orderBook(supplier);
+        reader.getBook(administrator);
+        administrator.notifyReader(reader);
+        supplier.suppliesBook(administrator);
+        librarian.orderBook(supplier);
+        reader.returnBook(administrator);
+        administrator.returnBook(reader);
 
     }
 }

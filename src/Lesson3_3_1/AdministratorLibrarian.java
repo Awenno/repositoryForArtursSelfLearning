@@ -9,32 +9,31 @@ public class AdministratorLibrarian extends Users implements Administrator, Libr
     }
 
     @Override
-    public void findBook(Administrator administrator, Supplier supplier) {
-        System.out.println("Администратор " + administrator + " заказал у поставщика "
+    public void findBook(Supplier supplier) {
+        System.out.println("Администратор " + getName() + " заказал у поставщика "
                 + supplier + " несколько новых книг.");
     }
 
     @Override
-    public void notifyReader(Administrator administrator, Reader reader) {
-        System.out.println("Администратор " + administrator + " уведомил " + reader
+    public void notifyReader(Reader reader) {
+        System.out.println("Администратор " + getName() + " уведомил " + reader
                 + " о проссрочке ");
     }
 
 
     @Override
-    public void orderBook(Librarian librarian, Supplier supplier) {
-        System.out.println("Администратор " + librarian + " заказывает книги у " + supplier);
-    }
-
-
-    @Override
-    public void getBook(Administrator administrator, Reader reader) {
-        System.out.println("Администратор " + administrator + " выдала книгу " + reader);
+    public void orderBook(Supplier supplier) {
+        System.out.println("Администратор " + getName() + " заказывает книги у " + supplier);
     }
 
     @Override
-    public void returnBook(Administrator administrator, Reader reader) {
-        System.out.println(administrator + " принимает книгу, которую вернул их читатель " + reader);
+    public void getBook(Reader reader) {
+        System.out.println("Администратор " + getName() + " выдала книгу " + reader);
+    }
+
+    @Override
+    public void returnBook(Reader reader) {
+        System.out.println(getName() + " принимает книгу, которую вернул их читатель " + reader);
 
     }
 }

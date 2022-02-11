@@ -8,7 +8,7 @@ public class SupplierImpl extends Users implements Supplier {
     }
 
     @Override
-    public void suppliesBook(Supplier supplier, Administrator administrator) {
-        System.out.println(supplier + " поставляет книги в библиотеку по заказу библиотекаря " + administrator);
+    public void suppliesBook(Administrator administrator) {
+        System.out.println(getName() + " поставляет книги в библиотеку по заказу библиотекаря " + administrator);
     }
 }
